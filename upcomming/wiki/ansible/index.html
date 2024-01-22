@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <code>
+        Définitions
+Control node :
+Dispose d'ansible
+Permet de déployer et installer les machines à distance
+Dispose des accès qui permettent les installations
+Dispose des dépôts installés
+Dispose des secrets
+Managed nodes :
+Cibles du control node
+Là où on utilise ansible
+Python doit être installé sur ces machines
+On doit avoir un user ssh qui peut étendre ses privilèges
+Inventory (par environnements) :
+Inventaire des machines --> fichier inventory.yml ou inventory.init --> le fichier peut :
+Être statique (en brut) ou dynamique (à base de python, qui permettent de taper sur des API ou des listes distantes)
+Contenir les host (ip, dns)
+Contenir les variables et les hosts
+Utiliser des patterns (regex)
+Fichiers de variables (il en existe 22 types ayant un ordre d'importance)
+Host Vars --> plus spécifique que le Group Vars et primeras dessus --> variables liées à un host
+On a un host et on créer le fichier Hostvars/server1.yml --> La machine spécifié utilisera les variables de ce fichier
+Group Vars --> variables liées à un groupe d'hosts (s'il y a un host vars, le group vars ne va pas être utilisé)
+On a un groupe webservers et on créer le fichier Groupvars/webservers.yml --> Toutes les machines liées à ce groupe utiliserons les variables de ce fichier
+Task : c'est un fichier contenant une action dans ansible (user, group, command, module) au format yml. On peut aussi utiliser un module dans une task
+Modules : ensemble d'actions spécifiques jouées dans les tasks (ex : création de users, de groupes, etc). Créer par ansible ou par la communauté
+Rôles :
+ensembles de Tasks cohérentes permettant de faire qqch de spécifique.
+Il vaut mieux segmenter les rôles pour ne pas en avoir beaucoup et utiliser dans des cas de figures diverses.
+Ne créer des rôles spéficiques que pour des actions spécifiques.
+Ils sont organisés en différents outils (tasks, templates, handlers, variables (default ou non), meta (ansible galaxy))
+Peuvent être partagés sur le hub ansible galaxy
+Il vaut mieux le versionner (un dépôt par rôle ou par inventory)
+Playbooks : fichier qui sert à appliquer les rôles à l'inventory
+Plugins : modifie ou augmente les capacités de ansible
+Immutabilité : https://fr.wikipedia.org/wiki/Chattr
+ 
+gather_facts : variables d’environnements que peut collecter ansible, par exemple des variables d’OS, d'application, etc
+Tips :
+Pour éviter d'avoir une requête pour accepter un host à chaque fois, aller dans /etc/ansible/ansible.cfg et changer host_key_checking = FALSE
+
+Commandes
+ansible-playbook --> permet de lancer un playbook
+Exemple : ansible-playbook -i inventory.yml -u <USERNAME> playbookname.yml
+-i : inventory
+-l : limit> spécifier un/des groupes ou serveurs ou patterns
+-u : user
+-b : become > sudo (élévation de privilèges)
+-k : password de connexion ssh (à éviter)
+-K : password du sudo
+-C : --check : permet de tourner à vide ansible et voir si tout est ok, mais ne fais pas réellement les gestes
+-D : --diff : afficher les différences avant/après les tasks (peut être complémentaire avec le -C pour voir ce que va faire les tasks)
+--syntax-check : vérifie la syntaxe
+--ask-vault : prompt pour entrer le password de chiffrement du vault
+--vault-password-file : permet de cibler le fichier contenant les password et éviter d'utiliser  --ask-vault
+-e : surchager/remplacer n'importe quel variable
+-f : nbr de parallélisation
+-t : filtrer les tags (--skip-tags) pour rejouer une task ou une partie d'un rôle spécifique et éviter de rejouer tout le playbook/rôle/task
+--flush-cache : évite l'utilisation du cache (par exemple si on veut jouer un rôle qu'on a déjà joué et qui est en cache avec des infos qu'on ne souhaite pas réutiliser)
+--step : task pas-à-pas détaillé et on doit confirmer pour passer à la task suivante
+--start-at-task : permet de commencer à un task précise
+--list-tags : liste tous les tags rencontrés
+--list-tasks : liste toutes les tasks qui vont être exécutés (peut être lancé avant le --start-at-task)
+ansible-docs <nom_du_module>
+comme un man pour un module ansible
+ansible $myhost --become -m raw -a "yum install -y python3"
+permet d'installer python sur une machine distante (accès ssh nécessaire ou mdp)
+ansible-config
+Binaire pour faire la configuration de ansible (ansible.cfg)
+options :
+view permet de voir, à l’endroit où nous sommes, le ansible.cfg pris en compte
+list permet de lister toutes les variables et leur valeurs
+dump liste toutes les variables ansibles
+dump --only-changed liste les valeurs par défauts modifiées
+ansible_install_dependancies_collections
+Permet d’installer les dépendances de la collection
+Modules
+FILE
+state : touch pour créer des fichiers
+state : directory pour créer un dossier
+state : file pour vérifier si un fichier existe
+state : absent pour supprimer des fichiers/folder s'ils existent
+path : /path pour préciser l'emplacement du dossier ou fichier à manipuler
+become : yes pour faire une élévation sudo
+recurse : yes pour créer des path en récursifs
+owner : $owner pour préciser le proprio du file/folder
+group : $group pour préciser le group du file/folder
+mode : 0755 pour préciser les droits du file/folder
+attribute : paramètre particulier d'un fichier
+force : pour les liens symboliques (si le fichier source n'existe pas, la destination existe)
+group/owner : proprio et groupe de l'élement (avec l'UID/GUID ou le nom)
+mode : "0755" ou "u=rwx,g=rwx,o=rwx"
+path : localisation
+recurse : création du chemin intermédiaire s'il n'existe pas (yes/no) > pour les directory uniquement
+src : pour les liens (hard ou soft)
+state : permet de choisir le type (absent / directory / file / hard / link / touch)
+ 
+include_role
+  	name: roles_dir
+  	tasks_from: task.yml
+Example :
+
+        	arborescence
+ 
+
+                                                           playbook-folder-file.yml
+ 
+
+            	file_format.yml
+ 
+Stat (tester un fichier)
+path : chemin du fichier ou folder
+follow : suivre les liens symboliques
+get-checksum : récupérer le checksum (exemple pour un fichier md5 ou iso)
+get-mime : récupération du type de données
+Syntaxe de l’inventory
+all:
+   children:
+ 	server_group1:
+   	hosts:
+     	host1:
+ 	server_group2:
+   	children:
+     	app1:
+       	hosts:
+         	host2:
+         	host3:
+     	app2:
+       	hosts:
+         	host4:
+         	host5:
+Register
+register (enregistrer ce que le module prévoit comme output)
+ 
+Utilisation :
+
+ 
+ 
+Exemple :
+
+Output :
+
+ 
+ 
+Exemple :
+
+Output :
+
+ 
+
+ 
+Configuration
+Clé ssh :
+Création de clé ssh
+ssh-copy-id vers la cible
+ssh -i ~/.ssh/id_ecdsa user@host --> si vous n'avez pas d'agent qui embarque la clé ssh privée
+ssh user@host --> si vous avez un agent qui embarque la clé ssh privée
+ssh-add -l --> pour voir l'agent et la clé associée
+eval `ssh-agent` --> pour créer un agent
+ssh-add --> pour ajouter la clé privée à l'agent
+Fichier ~/.ssh/config sur le serveur hôte (pas la cible) --> permet de stipuler pour un ou plusieurs host des paramètres et éviter de les mettre dans la commande ssh (attention le fichier se lit de haut en bas concernant les priorités)
+Host $host_cible
+User $username
+Port 22
+IdentityFile ~/.ssh/macleprivee
+LogLevel INFO
+Compression yes
+ForwardAgent yes
+ForwardX11 yes
+ 
+CFG ansible
+Lien : https://docs.ansible.com/ansible/latest/installation_guide/intro_configuration.html
+Permet de stipuler la configuration de ansible, soit pour tous les playbooks, soit pour un playbook en particulier, soit
+Il peut se trouver à plusieurs endroits :
+au niveau de votre playbook avec le fichier ansible.cfg
+pour un user donné dans ~/.ansible/ansible.cfg
+/etc/ansible/ansible.cfg
+Erreurs
+1/
+[WARNING]: Skipping unexpected key (local) in group (all), only "vars", "children" and "hosts" are valid
+[WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+[WARNING]: Could not match supplied host pattern, ignoring: sesadev
+--> Mauvaise configuration du fichier inventaire.yml, voir How to pair hosts with variables in ansible - Stack Overflow
+ 
+2/
+[WARNING]: Could not match supplied host pattern, ignoring: hosts
+--> Mauvaise configuration du fichier inventaire.yml, voir ansible - How to resolve warning "Could not match supplied host pattern, ignoring: <machine hostname>? - Stack Overflow
+ 
+ 
+Liens utiles
+ansible.builtin.file module – Manage files and file properties — Ansible Documentation
+
+—---------------------
+
+JINJA et VARIABLES
+on peut mettre du json dans du yaml car il est un sur-ensemble du json
+
+jinja : module python qui parse du texte, il remplace le {{mavariable}} par la variable. Si on a une double accolade en début de définition, il faut mettre des guillemets “{{mavariable}}”
+
+
+namespace.collection.module:
+exemple:
+ansible.builtin.debug:
+ansible.community.module
+
+namespace.collection.module:
+	paramètre: xxxx
+
+
+Les variables définies sont globales, mais on peut définir des variables ponctuellement avec le module ansible.builtin.set_facts:
+	fsdjfslfd: fdsfjslf
+
+Les variables ansible sont surchargeables, cad qu’on peut changer la valeur après sa définition et ça a une notion de priorité :
+
+Plus le score est élevé, plus la variable est prioritaire
+extra vars
+>>> ansible-playbook -e "prenom=yohan" playbook_hello.yml
+le -e permet de surcharger la variable
+
+filtre : bout de code python qui permet de prendre le premier paramètre et le modifier
+exemple :
+
+le prénom va être filtré et mis en majuscule en sortie
+
+when
+
+
+Créer un module
+Pour créer un module, on a besoin de :
+les librairies
+3 variables : DOCUMENTATION, EXAMPLES, RETURN
+
+def xxx()
+	code python
+
+module = AnsibleModule(
+	argument_spec=dict(
+		nom_du_parametre=dict(type=’int’ , required=True, default=12)))
+
+result = { ‘changed’ : False,
+    ‘clé’ : valeur}
+
+result[clé] = xxxx + module.params[‘nom_du_parametre‘]
+
+exemple : voir github module tree
+
+    </code>
+</body>
+</html>
