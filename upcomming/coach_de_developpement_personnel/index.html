@@ -3,42 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Document</title>
 </head>
 <body>
     <header>
         <!-- barre de navigation avec des ancres menant vers la partie de la page concernée-->
         <!-- ajouter un sous menu quand on passe la souris sur le menu -->
-        <nav>
+        <nav id="navbar">
             <ul>
-                <a href="#accueil-section">
-                    <li>Accueil</li>
-                </a>
-            </ul>
-            <ul>
-                <a href="#about-section">
-                    <li>À Propos de Moi</li>
-                </a>
-            </ul>
-            <ul>
-                <a href="#services-section">
-                    <li>Services</li>
-                </a>
-            </ul>
-            <ul>
-                <a href="#temoignages-section">
-                    <li>Témoignages</li>
-                </a>
-            </ul>
-            <ul>
-                <a href="#blog-section">
-                    <li>Blog</li>
-                </a>
-            </ul>
-            <ul>
-                <a href="#contact-section">
-                    <li>Contact</li>
-                </a>
+                <li><a href="#accueil-section">Accueil</a></li>
+
+                <li><a href="#about-section">À Propos de Moi</a></li>
+
+                <li><a href="#services-section">Services</a></li>
+
+                <li><a href="#temoignages-section">Témoignages</a></li>
+
+                <li><a href="#blog-section">Blog</a></li>
+
+                <li><a href="#contact-section">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -46,82 +30,88 @@
     <section>
         <!-- partie accueil -->
         <article id="accueil-section">
-            <h1>AMELIE DUPONT</h1>
-            <h1>COACH DE DÉVELOPPEMENT PERSONNEL</h1>
-            <a href="#contact-section">
-                <p>Prendre Rendez-vous</p>
-            </a>
+            <div class="contenu-accueil">
+                <h1>AMELIE DUPONT</h1>
+                <h1>COACH DE DÉVELOPPEMENT PERSONNEL</h1>
+                <a href="#contact-section">
+                    <button id="CTA-1">Prendre Rendez-vous</button>
+                </a>
+            </div>
         </article>
 
         <!-- partie À Propos de Moi -->
         <article id="about-section">
-            <h1>À PROPOS DE MOI</h1>
-            <h2>Ma Mission</h2>
-                <p>Mon objectif est de vous accompagner dans votre parcours vers une vie épanouissante et pleine de sens. En tant que coach de développement personnel, je crois profondément au pouvoir de la transformation personnelle et à la capacité de chacun à atteindre son plein potentiel.</p>
+                <div class="contenu-about">
+                    <h1>À PROPOS DE MOI</h1>
+                    <h2>Ma Mission</h2>
+                        <p>Mon objectif est de vous accompagner dans votre parcours vers une vie épanouissante et pleine de sens. En tant que coach de développement personnel, je crois profondément au pouvoir de la transformation personnelle et à la capacité de chacun à atteindre son plein potentiel.</p>
 
-            <h2>Mon Parcours</h2>
-                <p>Forte d'une formation approfondie en coaching et d'une expérience enrichissante, j'ai eu le privilège d'accompagner de nombreuses personnes dans leur quête de réussite personnelle. Mon approche repose sur l'écoute empathique, la compréhension holistique et la co-création de solutions adaptées à vos besoins uniques.</p>
+                    <h2>Mon Parcours</h2>
+                        <p>Forte d'une formation approfondie en coaching et d'une expérience enrichissante, j'ai eu le privilège d'accompagner de nombreuses personnes dans leur quête de réussite personnelle. Mon approche repose sur l'écoute empathique, la compréhension holistique et la co-création de solutions adaptées à vos besoins uniques.</p>
 
-            <h2>Mes Domaines d'Expertise</h2>
-                <p>Que vous souhaitiez surmonter des obstacles personnels, établir des objectifs professionnels, renforcer vos relations ou simplement trouver un équilibre entre vie personnelle et professionnelle, je suis là pour vous guider. Mon expertise couvre une variété de domaines, notamment la confiance en soi, la gestion du stress, la planification de carrière et le développement de compétences relationnelles.</p>
+                    <h2>Mes Domaines d'Expertise</h2>
+                        <p>Que vous souhaitiez surmonter des obstacles personnels, établir des objectifs professionnels, renforcer vos relations ou simplement trouver un équilibre entre vie personnelle et professionnelle, je suis là pour vous guider. Mon expertise couvre une variété de domaines, notamment la confiance en soi, la gestion du stress, la planification de carrière et le développement de compétences relationnelles.</p>
 
-            <h2>Approche Personnalisée</h2>
-                <p>Chaque individu est unique, c'est pourquoi ma méthode de coaching est entièrement personnalisée. Ensemble, nous explorerons vos valeurs, vos aspirations et les défis auxquels vous faites face. À travers des conversations authentiques, des exercices pratiques et des plans d'action concrets, nous tracerons le chemin vers la réalisation de vos objectifs.</p>
+                    <h2>Approche Personnalisée</h2>
+                        <p>Chaque individu est unique, c'est pourquoi ma méthode de coaching est entièrement personnalisée. Ensemble, nous explorerons vos valeurs, vos aspirations et les défis auxquels vous faites face. À travers des conversations authentiques, des exercices pratiques et des plans d'action concrets, nous tracerons le chemin vers la réalisation de vos objectifs.</p>
 
-            <h2>Contactez-Moi</h2>
-                <p>Si vous êtes prêt(e) à entreprendre ce voyage de croissance personnelle, je serais honorée de faire partie de votre parcours. N'hésitez pas à me <a href="#contact-section">contacter</a> pour discuter de vos besoins, et découvrons ensemble comment je peux vous accompagner vers une vie épanouissante.</p>
-        </article>
+                    <h2>Contactez-Moi</h2>
+                        <p>Si vous êtes prêt(e) à entreprendre ce voyage de croissance personnelle, je serais honorée de faire partie de votre parcours. N'hésitez pas à me <a href="#contact-section">contacter</a> pour discuter de vos besoins, et découvrons ensemble comment je peux vous accompagner vers une vie épanouissante.</p>
+                </div>
+            </article>
 
         <!-- partie Services -->
         <article id="services-section">
-            <h1>SERVICES</h1>
-            <h2>Coaching individuel :</h2>
-                <p>Séances individuelles où le coach travaille directement avec le client pour définir des objectifs, surmonter des obstacles et créer des plans d'action personnalisés.</p>
-                <a href="">Plus d'informations</a>
+            <div class="contenu-services">
+                <h1>SERVICES</h1>
+                <h2>Coaching individuel :</h2>
+                    <p>Séances individuelles où le coach travaille directement avec le client pour définir des objectifs, surmonter des obstacles et créer des plans d'action personnalisés.</p>
+                    <button class="button-infos-services">Plus d'informations</button>
 
-            <h2>Coaching de groupe :</h2>
-                <p>Séances de coaching avec plusieurs participants partageant des objectifs similaires. Cela favorise la dynamique de groupe, le partage d'expériences et le soutien mutuel.</p>
-                <a href="">Plus d'informations</a>
+                <h2>Coaching de groupe :</h2>
+                    <p>Séances de coaching avec plusieurs participants partageant des objectifs similaires. Cela favorise la dynamique de groupe, le partage d'expériences et le soutien mutuel.</p>
+                    <button class="button-infos-services">Plus d'informations</button>
 
-            <h2>Développement de la confiance en soi :</h2>
-                <p>Aider les clients à identifier et à surmonter les obstacles qui entravent leur confiance en soi. Fournir des outils pour renforcer l'estime de soi et la confiance personnelle.</p>
-                <a href="">Plus d'informations</a>
-            
-            <h2>Gestion du stress et de l'anxiété :</h2>
-                <p>Enseigner des techniques de gestion du stress et de l'anxiété, comme la méditation, la respiration profonde et d'autres méthodes de relaxation.</p>
-                <a href="">Plus d'informations</a>
+                <h2>Développement de la confiance en soi :</h2>
+                    <p>Aider les clients à identifier et à surmonter les obstacles qui entravent leur confiance en soi. Fournir des outils pour renforcer l'estime de soi et la confiance personnelle.</p>
+                    <button class="button-infos-services">Plus d'informations</button>
+                
+                <h2>Gestion du stress et de l'anxiété :</h2>
+                    <p>Enseigner des techniques de gestion du stress et de l'anxiété, comme la méditation, la respiration profonde et d'autres méthodes de relaxation.</p>
+                    <button class="button-infos-services">Plus d'informations</button>
 
-            <h2>Équilibre travail-vie personnelle :</h2>
-                <p>Aider à trouver un équilibre entre la vie professionnelle et personnelle, en établissant des priorités et en mettant en place des stratégies pour gérer le temps de manière plus efficace.</p>
-                <a href="">Plus d'informations</a>
+                <h2>Équilibre travail-vie personnelle :</h2>
+                    <p>Aider à trouver un équilibre entre la vie professionnelle et personnelle, en établissant des priorités et en mettant en place des stratégies pour gérer le temps de manière plus efficace.</p>
+                    <button class="button-infos-services">Plus d'informations</button>
 
-            <h2>Orientation professionnelle :</h2>
-                <p>Aider à identifier les objectifs professionnels, à élaborer des plans de carrière, à améliorer les compétences en leadership et à surmonter les défis professionnels.</p>
-                <a href="">Plus d'informations</a>
+                <h2>Orientation professionnelle :</h2>
+                    <p>Aider à identifier les objectifs professionnels, à élaborer des plans de carrière, à améliorer les compétences en leadership et à surmonter les défis professionnels.</p>
+                    <button class="button-infos-services">Plus d'informations</button>
 
-            <h2>Gestion du changement :</h2>
-                <p>Accompagner les clients à travers des périodes de changement, que ce soit dans leur carrière, leurs relations ou d'autres aspects de leur vie.</p>
-                <a href="">Plus d'informations</a>
+                <h2>Gestion du changement :</h2>
+                    <p>Accompagner les clients à travers des périodes de changement, que ce soit dans leur carrière, leurs relations ou d'autres aspects de leur vie.</p>
+                    <button class="button-infos-services">Plus d'informations</button>
 
-            <h2>Développement de compétences relationnelles :</h2>
-                <p>Améliorer les compétences en communication, la résolution de conflits et les relations interpersonnelles.</p>
-                <a href="">Plus d'informations</a>
+                <h2>Développement de compétences relationnelles :</h2>
+                    <p>Améliorer les compétences en communication, la résolution de conflits et les relations interpersonnelles.</p>
+                    <button class="button-infos-services">Plus d'informations</button>
 
-            <h2>Exploration de la vie personnelle et des valeurs :</h2>
-                <p>Aider à définir les valeurs fondamentales et à aligner les choix de vie en conséquence.</p>
-                <a href="">Plus d'informations</a>
+                <h2>Exploration de la vie personnelle et des valeurs :</h2>
+                    <p>Aider à définir les valeurs fondamentales et à aligner les choix de vie en conséquence.</p>
+                    <button class="button-infos-services">Plus d'informations</button>
 
-            <h2>Développement de l'intelligence émotionnelle :</h2>
-                <p>Travailler sur la compréhension et la gestion des émotions, ainsi que sur la construction de relations émotionnellement intelligentes.</p>
-                <a href="">Plus d'informations</a>
+                <h2>Développement de l'intelligence émotionnelle :</h2>
+                    <p>Travailler sur la compréhension et la gestion des émotions, ainsi que sur la construction de relations émotionnellement intelligentes.</p>
+                    <button class="button-infos-services">Plus d'informations</button>
 
-            <h2>Planification financière personnelle :</h2>
-                <p>Aider à établir des objectifs financiers, à créer des budgets et à développer une mentalité financière saine.</p>
-                <a href="">Plus d'informations</a>
+                <h2>Planification financière personnelle :</h2>
+                    <p>Aider à établir des objectifs financiers, à créer des budgets et à développer une mentalité financière saine.</p>
+                    <button class="button-infos-services">Plus d'informations</button>
 
-            <h2>Amélioration de la santé et du bien-être :</h2>
-                <p>Fournir des conseils et des stratégies pour améliorer la santé physique, mentale et émotionnelle.</p>
-                <a href="">Plus d'informations</a>
+                <h2>Amélioration de la santé et du bien-être :</h2>
+                    <p>Fournir des conseils et des stratégies pour améliorer la santé physique, mentale et émotionnelle.</p>
+                    <button class="button-infos-services">Plus d'informations</button>
+            </div>
         </article>
 
         <!-- partie Témoignages -->
@@ -150,7 +140,7 @@
             <h1>BLOG</h1>
             <!-- sous partie articles de blog -->
             <div id="article-de-blog" class="blog-post">
-            <h2>Titre de l'article 1</h2>
+                <h2>Titre de l'article 1</h2>
                 <p class="meta">Publié le 1 janvier 2024 par John Doe</p>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at augue eget arcu dictum varius eu vel nisi. 
@@ -238,6 +228,11 @@
             </div>
         </article>
     </section>
+
+    <div id="scroll-to-top" onclick="scrollToTop()">^</div>
+
+    <!-- sections pour les scripts js -->
+    <script src="scripts/scroll_top_button.js"></script>  <!-- boutton pour remonter en haut de la page -->
 </body>
 </html>
 
