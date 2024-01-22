@@ -1,0 +1,189 @@
+body {
+    font-size: 16px;
+    color: #b82b21;
+    background-color: #f6f0e9;
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    font-size: 30px;
+    color: #62aaa7;
+}
+
+h2 {
+    font-size: 25px;
+    color: black;
+}
+
+a {
+    color: inherit;
+    text-decoration: none; /* Pour enlever également le soulignement, si nécessaire */
+}
+
+/*--------------------------------------------- HEADER --------------------------------------*/
+#navbar {
+    background-color: #f6f0e9;  /*permet de masquer le texte quand il passe sous la navbar*/
+    position: relative;
+    z-index: 100;       /* permet de garder la nav au dessus de toutes les autres composantes */
+    border-bottom: thick double #cad3d6;
+}
+
+#navbar ul {
+    font-size: 32px;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+#navbar a:hover {
+    color: #62aaa7; /* Couleur de survol */
+}
+
+#navbar.fixe {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#accueil-section, #about-section, #services-section, #temoignages-section, #blog-section, #contact-section {
+    padding-top: 5px; /* Ajustez selon la hauteur de votre barre de navigation */
+}
+
+/*--------------------------------------------- ACCUEIL --------------------------------------*/
+
+#accueil-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contenu-accueil {
+    max-width: 600px;
+}
+
+.contenu-accueil h1 {
+    font-size: 2.5em;
+    color: #c2a817;
+}
+
+#CTA-1 {
+    background-color: #c2a817;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+/*--------------------------------------------- ABOUT --------------------------------------*/
+#about-section {
+    background-color: #d7c876;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 2%;
+}
+
+.contenu-about {    
+    max-width: 600px;
+}
+
+.contenu-about h1 {
+    border: thick double #cad3d6;
+    padding: 5px;
+}
+
+.contenu-about h2 {
+    font-size: 2.5em;
+}
+
+/*--------------------------------------------- SERVICES --------------------------------------*/
+#services-section {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 2%;
+}
+
+.contenu-services {    
+    max-width: 600px;
+}
+
+.contenu-services h1 {
+    border: thick double #cad3d6;
+    padding: 5px;
+}
+
+.contenu-services h2 {
+    font-size: 2.5em;
+}
+
+.button-infos-services {
+    background-color: #c2a817;
+    color: #fff;
+}
+
+/*--------------------------------------------- TEMOIGNAGES --------------------------------------*/
+/* #services-section {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 2%;
+}
+
+.contenu-services {    
+    max-width: 600px;
+}
+
+.contenu-services h1 {
+    border: thick double #cad3d6;
+    padding: 5px;
+}
+
+.contenu-services h2 {
+    font-size: 2.5em;
+}
+
+.button-infos-services {
+    background-color: #c2a817;
+    color: #fff;
+} */
+
+/*--------------------------------------------- SCROLL TOP BUTTON --------------------------------------*/
+
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #62aaa7;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+  
+  #scroll-to-top:hover {
+    background-color: #62aaa7;
+}
+
+/*--------------------------------------------- MEDIA QUERIES --------------------------------------*/
+
+/* Styles pour les écrans de taille moyenne (tablette) */
+@media only screen and (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+}
+  
+/* Styles pour les petits écrans (smartphones) */
+@media only screen and (max-width: 480px) {
+    body {
+      font-size: 12px;
+    }
+}
+/*  -->  durée : 3h30*/
