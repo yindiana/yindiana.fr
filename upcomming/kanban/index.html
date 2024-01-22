@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_kanban.css">
+    <title>Kanban</title>
+</head>
+<body>
+    <header>
+        <p>Outil Kanban de suivi des tâches</p>                 <!-- titre du header -->
+    </header>
+
+    <section>
+
+        <article>
+            <button class="button_create" type="button">Créer un ticket</button>      <!-- bouton creation nouveau ticket -->
+        </article>
+
+        <article>                                               <!-- Corps du tableau kanban -->
+            <div class="tableau_links">
+                <div class="tableau_link">
+                    <h1>Backlog</h1>
+                    <div class="reference_ticket">                <!--tickets de reference-->
+                        <label for="ticket_number">N° du Ticket</label>
+                        <input type="text" name="ticket_number" id="ticket_number">
+                        
+
+                        <label for="ticket_title">Titre</label>
+                        <input type="text" name="ticket_title" id="ticket_title">
+                        
+
+                        <label for="ticket_priority">Priorité</label>
+                        <select name="ticket" id="ticket_priority">
+                            <option value="">Choisir une priorité</option>
+                            <option value="faible">faible</option>
+                            <option value="moyen">moyen</option>
+                            <option value="important">important</option>
+                            <option value="élevé">élevé</option>
+                        </select>
+                        
+
+                        <label for="ticket_deadline">Deadline</label>
+                        <input type="text" name="ticket_deadline" id="ticket_deadline">
+
+
+                        <label for="ticket_wait_for">En attente de</label>
+                        <input type="text" name="ticket_wait_for" id="ticket_wait_for">
+
+
+                        <label for="ticket_follow_by">Suivi par</label>
+                        <input type="text" name="ticket_follow_by" id="ticket_follow_by">
+                    </div>
+                        
+                </div>
+                
+                <div class="tableau_link">
+                    <h1>A faire</h1>
+                </div>
+                
+                <div class="tableau_link">
+                    <h1>En cours</h1>
+                </div>
+
+                <div class="tableau_link">
+                    <h1>Suivi par</h1>
+                </div>
+
+                <div class="tableau_link">
+                    <h1>En attente</h1>
+                </div>
+
+                <div class="tableau_link">
+                    <h1>Fini</h1>
+                </div>
+            </div>
+        </article>
+
+    </section>
+
+    <footer>
+        <p>Outil développé par Yohan Indiana</p>            <!--- header -->
+    </footer>
+</body>
+</html>
