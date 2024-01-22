@@ -1,0 +1,28 @@
+body{
+    background-color: bisque;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: solid blue;
+}
+
+.tableau_links{
+    display: flex;
+    border: solid black;
+    justify-content: space-between;
+    width: 95vw;
+}
+
+.tableau_link{
+    display: flex;
+    flex-direction: column;
+}
+
+.reference_ticket{
+    display: flex;
+    flex-direction: column;
+    border: solid red;
+}
