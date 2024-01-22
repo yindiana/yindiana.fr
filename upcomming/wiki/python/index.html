@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Apprendre python by yindiana</title>
+</head>
+<body>
+    <h1>Apprendre python</h1>
+    <div>
+        <h2>Définitions de bases</h2>
+        <ol>
+                    
+            <a href="">
+                <li><code>str = "ceci est un string"</code></li></a>
+            <a href="">
+                <li><code>tableau = str[index]</code> :  ceci est un tableau</li></a>     
+            <a href="">
+                <li>les interger et les floats (+ - * / // % **) : la priorité des opérations est gardé par python</li></a>     
+            <a href="">
+                <li>Deux manières de déclarer une liste : <br> <code>liste1 = []</code> <br> <code>liste2 = list</code></li></a>     
+            <a href="">
+                <li>Deux manières de déclarer un tuple : <br> <code>le_tuple = ()</code> <br> <code>le_tuple = tuple()</code></li></a>     
+            <a href="">
+                <li>Deux manières de déclarer un set : <br> <code>le_set = {}</code> <br> <code>le_set = set()</code></li></a>     
+            <a href="">
+                <li>Dictionnaire : <br>
+                    <code>le_dictionnaire = {"clef1": "valeur1", "clef2": "valeur2", "clef3": "valeur3",}</code> <br>
+                <code>le_dictionnaire = {"clef1": "valeur1", "ma_liste": ["valeur1", "valeur2", "valeur3"],}</code></li></a>
+        </ol>
+    </div>
+
+    <div>
+        <h2>Print</h2>
+        <p> <code>print("Hello world")</code>    #print affiche à l'écran</p>
+
+        <p>les 3 guillemets permettent d'afficher sur plusieurs lignes l'output à l'écran : <br>
+        <code>print(""" <br>
+        Hello <br>
+        world 2 <br>
+        """)</code></p>
+
+
+        <p><code>variable = "Hello world"
+        nom = " yindiana.fr",</code> <br>
+        <code>print(variable + " yindiana 3")</code> : on peut afficher des variables avec du string <br>
+        <code>print(variable + nom + " 4")</code> : on peut afficher plusieurs variables</p>
+
+
+        <p><code>phrase = "{} {}".format(variable,nom)</code> : fonction avant la version 3 de python <br>
+        <code>phrase2 = f"{variable} {nom}"</code> : fonction à partir de la version 3 de python <br>
+        <code>print("phrase = " + phrase)</code> <br>
+        <code>print("prahse2 = " + phrase2)</code> </p>
+
+
+        <p><code>print("prahse est du type " + str(type(phrase)))</code> : trouver le type de la variable</p>
+    </div>
+
+    <div>
+        <h2>Les méthodes</h2>
+        <p><code>variable2 = "HeLlo world" <br>
+        print(variable.upper())</code> : permet de convertir la variable en majuscule <br>
+        <code>print(variable.lower())</code> : permet de convertir la variable en minuscule <br>
+        <code>print(variable2.count("l"))</code>  : permet de compter combien de fois j'ai le caractère l dans ma variable, sensible a la case <br>
+        <code>print(variable2.upper().count("L"))</code> : permet de compter combien de fois j'ai le caractère L dans ma variable, sensible a la case en sachant que j'ai mis le upper juste avant <br>
+        <code>print(variable2.find("L"))</code> : permet d'indiquer le numéro d'index du caractère, ATTENTION ça commence par 0 et ça compte tous les caractères, même les espaces <br>
+        <code>print(variable2.replace("l","L"))</code> : remplace le premier caractère par le second, le remplace partout où on le trouve <br>
+        <code>print(variable2.replace("l","L").count("L"))</code> : compte le nmb de L après avoir remplacer le petit l par le grand L</p>
+    </div>
+
+    <div>
+        <h2>les fonctions</h2>
+        <p><code>print(dir(variable2))</code> : permet de voir les méthodes qu'on peut utiliser sur cette variable <br>
+        <code>print(help(str))</code> : renvoi la documentation de str <br>
+        <code>print(help(str.lower))</code> : renvoi la documentation de lower <br>
+        <code>print(len(variable))</code> : permet de compter le nbr de caractère de la variable </p>
+    </div>
+    
+    <div>
+        <h2>les tableaux</h2>
+        <p><code>print(variable[1])</code> : permet d'afficher le caractère avec l'index numéro 1 de la variable Hello world <br>
+        <code>print(variable[0:3])</code> : permet d'afficher le caractère de l'index 0 à 2, le 3e n'est pas compris dedans <br>
+        <code>print(variable[0:])</code> : permet d'afficher le caractère de l'index 0 la fin <br>
+        <code>print(variable[:3])</code> : permet d'afficher le caractère du début de l'index à l'index 2, le 3e n'est pas compris dedans <br>
+        <code>print(variable[:])</code> : équivaut a print(variable) <br>
+        <code>print(variable[0:6:2])</code> : permet d'indiquer print(variable[début:fin:pas]) <br>
+        <code>print(variable[::-1])</code> : permet d'indiquer print(variable[début:fin:pas]), ici le -1 permet d'inverser la chaîne de caractère</p>
+    </div>
+
+    <div>
+        <h2>les integer et floats</h2>
+        <p>        on peut faire les calculs avec les interger et les floats (+ - * / // % **), la priorité des opérations est gardé par python :</p>
+        <p><code>entier = 9 <br>
+        virgule = 9.1 <br>
+        print(type(entier)) <br>
+        print(type(virgule)) </code><br>
+        <code>print(3//2)</code> : permet de diviser en faisant l'arrondi inférieur <br>
+        <code>print(10%7)</code> : modulo, c'est le reste de la division <br>
+        <code>print(3**2)</code> : puissance</p>
+
+
+        <p>utilisés souvent dans les boucles, ces opérations sont utilent pour gagner du temps : <br>
+        <code>entier += 1 <br>
+        print("addition = " + str(entier)) <br>
+        entier *= 2 <br>
+        print("multiplication = " + str(entier)) <br>
+        entier /= 4 <br>
+        print("division = " + str(entier)) <br>
+        entier -= 3 <br>
+        print("soustraction = " + str(entier))</code></p>
+    </div>
+
+    <div>
+        <h2>les fonctions</h2>
+        <p><code>print(abs(-3.14))</code> #affiche la valeur absolu <br>
+        <code>print(round(-3.14))</code> #affiche l'arrondi total <br>
+        <code>print(round(-3.14,1))</code> #affiche l'arrondi avec un chiffre après la virgule <br>
+        <code>print(abs(round(-3.14,1)))</code> #affiche la valeur absolu après avoir fait l'arrondi avec un chiffre après la virgule</p>
+    </div>
+
+    <div>
+        <h2>les comparaison (== > < >= <= !=)</h2>
+        <p><code>print(1 == 2)</code> #permet de oir si deux valeur sont égaux, la réponse est un booléan <br>
+        <code>print(1 != 2) #permet de voir si deux valeur sont différentes, la réponse est un booléan</code></p>
+    </div>
+
+    <div>
+        <h2>les listes</h2>
+        <p><code>liste1 = [] <br>
+        liste2 = list <br>
+        print(liste1) <br>
+        print(liste2)</code></p>
+
+
+        <p><code>liste1 = ["A", "B", "C"]</code> : ajouter des éléments à une liste <br>
+        <code>print(liste1) <br>
+        print(len(liste1))</code> : affiche le nbr d'éléments de la liste1 </p><br>
+        on utilise l'object tableau dans notre liste <br>
+        <code>print(liste1[1])</code> : affiche l'objet avec l'index numéro 1 de la liste, commence a 0 <br>
+        <code>print(liste1[-1])</code> : affiche la dernière valeur de la liste <br>
+        <code>print(liste1[1:3])</code> : affiche le deuxième et troisième élément, le quatriète étant exclu <br>
+        <code>print(liste1[::-1])</code> : affiche la liste entière avec un pas est de -1, donc inverse la liste </p>
+
+
+        <p><code>liste1.append("E")</code> #ajouter un élement à la fin de la liste <br>
+        <code>print(liste1)
+        liste1.insert(3,"D")</code> #ajouter un élement à l'index 3 de la liste <br>
+        <code>print(liste1) <br>
+        liste2 = ["AA", "BB", "CC"] <br>
+        liste1.extend(liste2)</code> #ajouter une liste à la fin de la liste <br>
+        <code>print(liste1)</code></p>
+        <p>On peut utiliser append ou insert pour ajouter une liste dans une liste, mais on aura les [] et pas uniquement les valeurs</p>
+
+
+        <p><code>liste1.remove("A")</code> : permet de supprimer une valeur d'une liste <br>
+        <code>print(liste1) <br>
+        suppression1 = liste1.pop()</code> : permet de supprimer la dernière valeur de la liste <br>
+        <code>print(liste1) <br>
+        print(suppression1) <br>
+        suppression2 = liste1.pop()</code> : permet de supprimer la dernière valeur de la liste <br>
+        <code>print(liste1) <br>
+        print(suppression2) </code></p>
+
+
+        <p><code>liste1.reverse()</code> #permet d'inverser la liste, comme avec le -1 <br>
+        <code>print(liste1)</code></p>
+
+
+        <p><code>liste1 = [2, 4, 1, 9, 7, 5] <br>
+        liste1.sort()</code> #permet de trier une liste dans l'ordre croissant <br>
+        <code>print(liste1) <br>
+        liste1.sort(reverse=True)</code> : permet de trier une liste dans l'ordre décroissant <br>
+        <code>print(liste1) <br>
+        liste2 = [2, 4, 1, 9, 7, 5] <br>
+        sorted_function = sorted(liste2)</code> : fonction qui fait la même chose que sort qui est une méthode <br>
+        <code>print(sorted_function)</code></p>
+
+
+        <p><code>print("mini = " + str(min(liste2)))
+        print("maxi = " + str(max(liste2)))
+        somme = sum(liste2)
+        print(somme)</code></p>
+
+
+        <p><code>liste1 = ["A", "B", "C"]</code> : ajouter des éléments à une liste <br>
+        <code>index_de_A = liste1.index("A")</code> : permet d'afficher le numéro de l'index de A <br>
+        <code>print(index_de_A)
+        print("A" in liste1)</code> : permet de savoir si A est dans la liste1, retourne un booléan</p>
+    </div>
+
+    <div>
+        <h2>les tuples</h2>
+        <p>C'est une liste immutable, on ne peux pas ajouter, supprimer ou modifier un tuple après qu'il est créé</p>
+        <p>Permet d'avoir une sécurité sur une liste, car personne ne peux la modifier</p>
+        <p><code>le_tuple = () <br>
+        le_tuple = tuple()</code></p>
+
+
+        <p><code>le_tuple = ("A", "B", "C", "D") <br>
+        print(le_tuple) <br>
+        print(le_tuple.count("A")) <br>
+        print(le_tuple.index("A")) <br>
+        print("A" in le_tuple)</code></p>
+    </div>
+
+    <div>
+        <h2>Les sets</h2>
+        <p>ce sont des listes sans ordre et sans doublon</p>
+        <p><code>le_set = {} <br>
+        le_set = set()</code></p>
+
+
+        <p><code>le_set = {"A", "B", "C", "D"}
+        print(le_set)</code></p>
+
+
+        <p><code>le_set = {"A", "B", "C", "D", "A"}</code> #même si on rajoute la même valeur, il n'apparait qu'une fois <br>
+        <code>print(le_set)</code></p>
+
+
+        <p><code>le_set2 = {"A", "B", "E"} <br>
+        print(le_set.intersection(le_set2))</code> #trouver l'intersection entre deux listes <br>
+        <code>print(le_set.difference(le_set2))</code> #trouver la différence entre deux listes <br>
+        <code>print(le_set.union(le_set2))</code> #compare les deux listes et ajoute a la liste 1 les éléments différents qu'il y a dans la liste 2 <br>
+        on peut utiliser le pop et le remove par exemple, cependant on n'a pas l'index car il n'y a pas d'ordre <br>
+        <code>conversion_liste_en_set = set(liste1) #permet de convertir une liste en set</code></p>
+    </div>
+
+    <div>
+        <h2>les dictionnaires</h2>
+        <p><code>le_dictionnaire = {"clef1": "valeur1", <br>
+                        "clef2": "valeur2", <br>
+                        "clef3": "valeur3",} #on défini un dictionnaire grâce a des clefs valeurs <br>
+        print(le_dictionnaire)
+        le_dictionnaire = {"clef1": "valeur1", "ma_liste": ["valeur1", "valeur2", "valeur3"]}</code> : on peut également définir une liste comme valeur d'une clef <br>
+        <code>print(le_dictionnaire)</code></p>
+
+
+        <p><code>print(le_dictionnaire["ma_liste"])</code> : on peut spécifier le clef qu'on veut afficher <br>
+        <code>print(le_dictionnaire.get("clef4"))</code> : au lieu de spécifier directement la clef, on utilise la méthode get, car sinon on aurait une erreur, alors que la on a un retour avec gestion d'erreur <br>
+
+
+        <p><code>le_dictionnaire["clef1"] = "nouvelle valeur"</code> : permet de modifier la valeur d'une clef du dictionnaire
+        <code>print(le_dictionnaire.get("clef1"))</code></p>
+
+
+        <p><code>le_dictionnaire = {"clef1": "valeur1", <br>
+                        "clef2": "valeur2", <br>
+                        "clef3": "valeur3", <br>
+                        "ma_liste": ["valeur1", "valeur2", "valeur3"]} <br>
+        le_dictionnaire.update({"clef1": "valeur0", "clef2": "valeur1"})</code> : permet de modifier uniquement les clefs que l'on souhaite et le reste des clefs restent inchangés <br>
+        <code>print(le_dictionnaire)</code></p>
+
+
+        <p><code>del le_dictionnaire["clef1"]</code> : permet de supprimer une clef <br>
+        <code>print(le_dictionnaire) <br>
+        variable3 = le_dictionnaire.pop("ma_liste")</code> : permet de pop la clé spécifiée <br>
+        <code>print(variable3)</code></p>
+
+
+        <p><code>print(len(le_dictionnaire))</code> : donne le nombre de clefs du dictionnaire <br>
+        <code>print(le_dictionnaire.keys())</code> : renvoi le nom des clefs du dictionnaire <br>
+        <code>print(le_dictionnaire.values())</code> : renvoi les valeurs des clefs du dictionnaire <br>
+        <code>print(le_dictionnaire.items())</code> : renvoi le couple clef:valeur du dictionnaire</p>
+
+
+        <p><code>for clef, valeur in le_dictionnaire.items() : <br>
+            print(clef, valeur)</code>  #boucle pour afficher les deux variables clef et valeur <br>
+            <code>print("la clef " + str(clef).upper() + " vaut " + str(valeur).upper())</code> <br>
+        On peut combiner des méthodes, des objects, des fonctions, etc</p>
+    </div>
+
+    <div>
+        <h2>if else</h2>
+        <p>par defaut la valeur est True <br>
+        <code>if True: <br>
+            print("vrai") <br>
+        else: <br>
+            print("false")</code></p>
+
+
+        <p>les opérateurs de comparaison <br>
+        == : permet de comparer l'égalité, différent de is <br>
+        <code>variable4 = "yindiana" <br>
+        if variable4 == "yindiana": <br>
+            print("ok") <br>
+        else: <br>
+            print("ko") </code></p>
+
+
+        <p> > < : permet de voir la supériorité ou l'infériorité <br>
+        <code>variable4 = 4 <br>
+        if variable4 > 3: <br>
+            print("ok") <br>
+        else: <br>
+            print("ko") </code></p>
+
+
+        <p> >= <= : permet de voir le supérieur/inférieur ou égal <br>
+        <code>variable4 = 4 <br>
+        if variable4 >= 3: <br>
+            print("ok") <br>
+        else: <br>
+            print("ko") </code></p>
+
+
+        <p> != : différent de <br>
+        <code>variable4 = 4 <br>
+        if variable4 != 3: <br>
+            print("ok") <br>
+        else: <br>
+            print("ko")</code></p>
+
+
+        <p> is : comparateur d'objets <br>
+        <code>liste4 = ["A", "B", "C"] <br>
+        liste5 = ["A", "B", "C"] <br>
+        if liste4 is liste5: <br>
+            print("listes indentiques") <br>
+        else: <br>
+            print("listes differentes")</code> : les listes sont différentes malgrés que les valeurs sont les mêmes, ce ne sont pas les mêmes objets </p>
+
+
+        <p><code>liste5 = liste4
+        if liste4 is liste5:
+            print("listes indentiques")
+        else:
+            print("listes differentes")</code> : les listes sont identiques, ils pointent vers le même objet</p>
+
+
+        <h2>elif</h2>
+        <p><code>variable4 = "Hello" <br>
+        if variable4 == "yindiana": <br>
+            print("ok") <br>
+        elif variable4 == "Hello": <br>
+            print("Yep") <br>
+        else: <br>
+            print("ko")</code></p>
+
+
+        <h2>and / or / not</h2>
+        active = True
+        variable5 = "Hello"
+        if variable5 == "yindiana" and active:
+            print(42)
+        elif not active:
+            print(0)
+        elif variable5 == "Test" or variable5 == "Test1":
+            print(404)
+        else:
+            print(1)
+
+
+        if 0:
+            print("faux")
+        else:
+            print("vrai")
+        #on peut également utilsier les (), not, 0, etc comme tests
+
+
+        #-----------------------------------------------
+    </div>
+
+    <div>
+        #Les boucles for, while, continue et break
+
+
+
+
+        lettres = ["A", "B", "C", "D"]
+
+
+
+
+        for lettre in lettres:      #boucle for
+            if lettre == "C":
+                break               #permet de stopper la boucle quand la lettre est C
+            print(lettre)
+
+
+
+
+        for lettre in lettres:      #boucle for
+            if lettre == "C":
+                continue            #permet de continuer la boucle quand la lettre est C
+            print(lettre)
+
+
+
+
+        chiffres = ["1", "2", "3", "4"]
+
+
+
+
+        for lettre in lettres:      #boucle for
+            for chiffre in chiffres:    #boucle for dans une boucle for, permet de combiner deux listes
+                print(lettre, chiffre)
+
+
+
+
+        for lettre in lettres:      #boucle for
+            for chiffre in range(10):    #le range(10) remplace la liste de chiffres de 0 à 9
+                print(lettre, chiffre)
+
+
+
+
+        for lettre in lettres:      #boucle for
+            for chiffre in range(101, 111):    #le range(début, fin) permet de définir le début et la fin de la liste, en ne prenant pas en compte la fin
+                print(lettre, chiffre)
+
+
+
+
+        x = 0
+        while x < 10:       #boucle while
+            print(x)
+            x += 1         #ne pas oublier d'itérer pour éviter les boucles infinies
+
+
+
+
+        x = 0
+        while x < 10:       #boucle while
+            if x == 5:                  #boucle if dans une boucle while
+                print("le if fonctionne, x = " + str(x))
+                x += 1                  #ne pas oublier d'itérer pour éviter la boucle continue avec x = 5
+                continue                #un continu dans une boucle if dans une boucle while
+            print(x)
+            x += 1         #ne pas oublier d'itérer pour éviter les boucles infinies
+
+
+
+
+        #--------------------------------------------------------------------------------
+    </div>
+
+    <div>
+        #Les fonctions
+        #L'utilité des fonctions c'est de factoriser le code pour le réutiliser et facilité la maintenance
+
+
+
+
+        def ma_fonction():      #ma fonction
+            return("Hello World")           #le return permet de stocker la valeur et de réutiliser cette valeur en dehors de la fonction, ce que ne permet pas un print(), mais elle ne print pas
+
+
+
+
+        result = ma_fonction()           #lancement de ma fonction et récupération dans une variable, sinon on ne pourras pas l'utiliser
+        print(result)                   #grâce a la variable, on peut faire tout ce qu'on veut avec
+        print(result.upper())           #on peut ajouter des methods par exemple
+
+
+
+
+        i = 1                   #exemple de réutilisation de ma fonction pour afficher 4 fois le Hello World
+        while i < 5:
+            print(str(i) + "/ voici le resultat de la boucle lie a la fonction " + result.lower())
+            i += 1
+
+
+
+
+        def ma_fonction(nom, achat, prix):      #fonction en utilisant des variabless
+            return "{} veux acheter {} au prix de {} euros".format(nom, achat, prix)    #on écrit son string et a la fin on ajoute les varibles que l'on souhaite utiliser
+
+
+
+
+        print(ma_fonction("max", "un bol", 20)) #le print va retourner ce qui est stocké dans le return, ne pas oublier d'affecter les variables, sinon il y aura une erreur
+
+
+
+
+        #Les fonctions args (listes) et kwargs (keywords args)
+        # *args récupérer un tuple
+        def ma_fonction2(*args):        #on créer une fonction qui récupère des élément *args et va ressortir au format tuple
+            print(args)
+
+
+
+
+        ma_fonction2("A", "B", "C")     #la fonction va me sortir un tuple
+
+        #--------------------------------------------------------------------------------
+    </div>
+
+    <div>
+        #Le slicing
+        #Permet de faire des manipulations de caractères sur des listes en utilisant les index (positif ou négatif)
+        maliste = [0,1,2,3,4,5,6,7,8,9]        #on créer une liste
+        print(maliste[2])                      #ici c'est l'index 3, donc le numéro 2
+        print(maliste[-2])                     #ici c'est l'index -2, donc le numéro 8
+        print(maliste[0:2])                    #ici c'est de l'index 0 à 2 exclus , donc les numéros 0 et 1
+        print(maliste[-3:-1])                  #ici c'est de l'index -3 à -1 exclus , donc les numéros 7 et 8
+        print(maliste[0:9:2])                  #ici c'est de l'index 0 à 9 exclus avec un pas de 2
+        print(maliste[::-1])                   #ici on prend du premier index au dernier et comme le pas est de -1, on inverse la liste
+
+
+
+
+        monurl = "hello.org"
+        print(monurl[:-4])                     #on peut manipuler des strings pour garder uniquement le hello par exemple
+
+
+
+
+        point = monurl.index(".")
+        print(monurl[:point])                  #on peut faire la même manipulation que ci-dessus, mais ici le "." est variable et donc on ne dépend pas d'un index en brut
+
+
+
+
+        monurl = ["hello.org", "hello2.fr"]
+        point = monurl[1].index(".")           #on peut manipuler des listes avec un index du "." variable
+        print(monurl[1][:point])               #on peut faire la même manipulation que ci-dessus, mais ici avec une liste
+
+
+
+
+        i=0
+        while i <= 1:                               #on peut faire la même chose que ci-dessus avec une boucle
+            point = monurl[i].index(".")          
+            print(monurl[i][:point])                #on aura toutes la liste avant le "."
+            i += 1
+
+
+
+
+        #--------------------------------------------------------------------------------
+    </div>
+
+    <div>
+        #Variables globales/locales
+        #Variables locales est définie dans une fonction
+        #Variables globale est définie partout, même en dehors des fonctions
+        varGlob = "ma variable globale"
+        def mafonction():
+            varLoc = "ma variable locale"
+            print(varLoc)
+        print("exemple 1")
+        mafonction()                #ici on aura la variable locale
+        print(varGlob)              #la variable ici est gloable, donc utilisable avec ou sans la fonction
+        #print(varLoc)               #il n'arriveras pas a la print car elle est locale a la fonction
+
+
+
+
+        varGlob = "ma variable globale"
+        def mafonction():
+            print(varGlob)
+        print("exemple 2")
+        mafonction()                    #on print la variable globale avec la fonction
+
+
+
+
+        var = "ma variable globale"
+        def mafonction():
+            var = "ma variable locale"
+            print(var)
+        print("exemple 3")
+        mafonction()                    #on print la variable locale avec la fonction
+        print(var)                      #on print la variable gloable en dehors de la fonction
+
+
+
+
+        var = "ma variable globale"
+        def mafonction():
+            global var                  #en utilisant au global, on peut transformer une variable locale en globale
+            var = "ma variable locale"
+            print(var)
+        print("exemple 4")
+        mafonction()                    #on print la variable locale avec la fonction
+        print(var)                      #on print la variable locale car on a utilisé le mot clé global
+
+
+
+
+        def fonction1():
+            print("exemple 5")
+            var1 = "var1"               #locale a fonction 1, mais global a fonction 2
+            def fonction2():
+                var1 = "var2"           #local a fonction 2, si elle n'existe pas, la valeur sera celle de la fonction 1
+                print(var1)             #affiche la valeur de var en local de la fonction 2 si elle est définie, sinon celle de la fonction 1
+            fonction2()
+            print(var1)                 #affiche la valeur de var en local de la fonction 1 si elle est définie, sinon une erreur
+        fonction1()
+
+        #--------------------------------------------------------------------------------
+    </div>
+
+    <div>
+        #List Comprehension
+        #C'est la manière de réaliser des listes en format one line et de simplifier la constitution de ces listes
+        #avec des conditions et des calculs
+
+
+
+
+        maList = [0,1,2,3,4,5,6,7,8,9]                  #on créer une liste basique
+        maComprehensionList = [i for i in range(10)]    #on créer la même liste mais avec une boucle
+        print(maComprehensionList)
+
+
+
+
+        maList2 = []                       #on créer une list 2 vide
+        for i in maList:                   #on fait une boucle for qui utilise la liste basique
+            maList2.append(i*10)           #on utilise le append pour multiplier par 10 les éléments de la liste de base
+        print(maList2)                     #on a la liste basique * 10 dans la list 2
+        maComprehensionList2 = [i*10 for i in range(10)]    #on créer la même liste mais avec une boucle
+        print(maComprehensionList2)         # on fait la même chose que la boucle grâce a ma comprehension list 2
+
+
+
+
+        maListPair = []                       #on créer une list 2 vide
+        for i in maList:                   #on fait une boucle for qui utilise la liste basique
+            if i % 2 == 0:
+                maListPair.append(i)
+        print(maListPair)                     #on a les éléments pair de la liste basique
+        maComprehensionList3 = [i for i in range(10) if i % 2 == 0]    #on créer la même liste mais avec une boucle for et une condition if
+        maComprehensionList4 = [i for i in maListPair if i % 2 == 0]    #on créer la même liste mais avec une boucle for et une condition if
+        print(maComprehensionList3)         # on fait la même chose que la boucle grâce a ma comprehension listPair
+        print(maComprehensionList4)         # on fait la même chose que la boucle grâce a ma comprehension listPair
+
+
+
+
+        maliste1 = [1,2,3]
+        malisteA = ["A", "B", "C"]
+        maliste1A = []
+        for i in maliste1:
+            for j in malisteA:
+                maliste1A.append("{} {}".format(i,j))
+        print(maliste1A)
+        maComprehensionList1A = ["{} {}".format(i,j) for i in maliste1 for j in malisteA]       # on fait la même chose que les deux boucles grâce a ma comprehension list
+        print(maComprehensionList1A)
+        #ATTTENTION : si on ne mets pas le format etc, on n'aura un autre formatage de la sortie de la comprehension list
+        maComprehensionList1A = [(i,j) for i in maliste1 for j in malisteA]       # on fait la même chose que les deux boucles grâce a ma comprehension list
+        print(maComprehensionList1A)
+
+        #--------------------------------------------------------------------------------
+    </div>
+
+    <div>
+        #Module OS : les répertoires
+        import os                   #importe le module os pour utiliser les fonction du système d'exploitation
+        print(dir(os))              #affiche la liste des méthodes disponibles avec le module os
+        print(help(os.listdir))     #affiche l'aide pour la méthode listdir du module os
+        os.chdir("path")            #se déplacer dans un dossier
+        print(os.getcwd)            #lister le contenu du répertoire courant
+        print(os.listdir("path"))   #lister les dossier du path
+        os.mkdir("path")            #créer un dossier en mode non récursif
+        os.makedirs("/folder_1/.../folder_n")         #créer un chemin de dossier en mode récursif
+        os.rmdir("path")            #supprimer un répertoire (non récursif)
+        os.removedirs("/folder_1/.../folder_n")       #supprimer un répertoire (récusif)
+        os.rename("path")           #permet de renommer des fichiers ou des répertoires
+        print(os.stat("path"))      #permet de récupérer toutes les infos d'un fichier/dossier
+        print(os.stat("path").st_size) #permet de récupérer une infos d'un fichier/dossier
+
+
+
+
+        import datetime
+        mod_time = os.stat("path").st_mtime     #récupérer la date de modification du répertoire/fichier
+        print(datetime.datetime.fromtimestamp(mod_time))    #utiliser la méthode datetime du module datetime pour formater la date de modification récupérer plus haut
+
+
+
+
+        #la méthode walk permet de parcourir des répertoires et de sortir 3 valeurs, les path, répertoires et fichiers
+        for chemin,repertoires,fichiers in os.walk("path"):
+            print(chemin,repertoires,fichiers)
+
+
+
+
+        #la méthode environ permet d'afficher les variables d'environnnements sous forme de dictionnaire
+        print(os.environ)
+        print(os.environ.get('HOME'))       #avec la méthode get, on peut spécifier la variable que l'on souhaite
+
+
+
+
+        #grâce au path.join, on aura pas a se soucier du "/" de fin du folder pour ajouter un fichier, les deux lignes donneront le même résultat
+        print(os.path.join("/path", "file.txt"))
+        print(os.path.join("/path/", "file.txt"))
+
+
+
+
+        print(os.path.basename("/path/file.txt"))   #affiche le nom du fichier
+        print(os.path.dirname("/path/file.txt"))    #affiche le chemin du fichier
+        print(os.path.split("/path/file.txt"))      #affiche le chemin du fichier et à côté le nom du fichier
+        print(os.path.splitext("/path/file.txt"))   #affiche l'extension du fichier
+
+
+
+
+        print(os.path.exists("/path/file.txt"))     #True or False si le fichier/dossier existe
+        print(os.path.isdir("/path/"))              #True or False si c'est un dossier
+        print(os.path.isfile("/path/file.txt"))     #True or False si c'est un fichier
+
+
+        #-----------------------------------------------
+    </div>
+
+    <div>
+        #Les modules
+        #Le module permet une meilleure organisation et partage du code, souvent grâce à des fonctions
+        #on peut set des fonctions et des variables dans des modules
+
+
+        #Créer un fichier appelé monmodule.py et y mettre le code suivant :
+        #!/usr/bin/python
+        mavariable = "la variable du module"        #on déclare une variable
+        print ("je suis {}".format(mavariable))     #on print la variable, on pourra la surcharger quand on l'utilise
+        def mafunction(defaut = mavariable):        #illustration de l'utilisation d'une fonction dans un module
+            return "Je suis {} de la fonction du module".format(mavariable)
+
+
+        #Créer un fichier python qui va utiliser le module et y mettre le code suivant
+        #EXEMPLE 1
+        #!/usr/bin/python
+        import monmodule                            #on importe le module qu'on a créé
+        mavariable = "la variable du fichier python"    #on déclare une variable local qui est différente de celle du module
+        print(monmodule.mavariable())                 #on print la variable du module
+
+
+        #EXEMPLE 2
+        #!/usr/bin/python
+        import monmodule as mm                          #on importe le module qu'on a créé et on lui donne un alias pour simplifié l'appel
+        mavariable = "la variable du fichier python"    #on déclare une variable local qui est différente de celle du module
+        print(mm.mavariable())                 #on print la variable du module via l'alias
+
+
+        #EXEMPLE 3
+        #!/usr/bin/python
+        import monmodule as mm                          #on importe le module qu'on a créé et on lui donne un alias pour simplifié l'appel
+        mavariable = "la variable du fichier python"    #on déclare une variable local qui est différente de celle du module
+        print(mm.mafunction())                 #on print la fonction du module via l'alias, le retour est donc la variable du module
+
+
+        #EXEMPLE 5
+        #!/usr/bin/python
+        import monmodule as mm                          #on importe le module qu'on a créé et on lui donne un alias pour simplifié l'appel
+        mavariable = "la variable du fichier python"    #on déclare une variable local qui est différente de celle du module
+        print(mm.mafunction(mavariable))                 #on print la fonction du module via l'alias, le retour est donc la variable du fichier
+
+
+        #EXEMPLE 6
+        #!/usr/bin/python
+        from monmodule import mafunction              #à partir du module on importe uniquement l'élément qu'on veut, ici la fonction
+        mavariable = "la variable du fichier python"    #on déclare une variable local qui est différente de celle du module
+        print(mafunction(mavariable))                 #on print la fonction du module, sans utiliser l'objet monmodule et on peut surcharger si on veux
+
+
+        #EXEMPLE 7
+        #!/usr/bin/python
+        from monmodule import mafunction              #à partir du module on importe toutes les variables présentes et les utiliser sans l'objet monmodule
+        mavariable = "la variable du fichier python"    #on déclare une variable local qui est différente de celle du module
+        print(mafunction(mavariable))                 #on print la fonction du module, sans utiliser l'objet monmodule et on peut surcharger si on veux
+
+
+        #Le path
+        #which python déterminer le path du binaire python pour le sheebang
+        #on peut ajouter des path provisoire dans un fichier grâce a un xxx.path.insert(index,"path") ou un xxx.path.append("path")
+        #On peut ajouter un path permanent grâce a la variable d'environnement PYTHONPATH="path"
+
+
+        #-----------------------------------------------
+    </div>
+
+    <div>
+        #PIP
+        #C'est un gestionnaire de librairies/paquets
+        apt install python3-pip         #installer pip
+        pip help                        #aide pip
+        pip $commande --help            #aide d'une commande pip
+        pip install pandas              #installer la librairie pandas
+        pip uninstall pandas            #désinstaller la librairie pandas
+        pip search pandas               #cherche la librairie pandas
+        pip list                        #lister les librairies installées
+        pip freeze > requirements.txt   #permet de rediriger les librairies avec leur version donnée dans un fichier
+        pip install -r requirements.txt #permet d'installer les librairies du fichier requirements et ainsi avoir les mêmes versions partout
+        pip list --format=legacy --outdated #formate la sortie du list et outdated montre si les librairies sont a jours
+        pip install --upgrade ansible    #met a jour ansible
+
+
+        #-----------------------------------------------
+    </div>
+
+    <div>
+        #Venv (virtual env)
+        pip install virtualenv          #installer virtualenv
+        virtualenv monprojet1           #créer un virtualenv, on peut le créer où on veut, c'est comme un dossier
+        virtualenv --python /usr/bin/python3 monprojet1           #créer un virtualenv avec une version spécifique de python
+        source monprojet1/bin/activate  #activer le virtualenv, on verra le nom du virtualenv au debut du prompt
+        deactivate                      #desactiver le virtualenv
+        #quand on est en virtualenv, on aura uniquement les librairies nécessaires au projet, c'est la qu'entre en jeu le freeze :
+        pip freeze --local > requirements.txt #permet de rediriger les librairies installées dans le fichier afin de réutiliser ailleurs
+        pip install -r requirements.txt #permet d'installer les librairies du fichier requirements et ainsi avoir les mêmes versions partout
+    </div>
+</body>
+</html>
