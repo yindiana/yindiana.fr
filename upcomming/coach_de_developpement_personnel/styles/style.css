@@ -20,6 +20,11 @@ a {
     text-decoration: none; /* Pour enlever également le soulignement, si nécessaire */
 }
 
+li {
+    list-style: none;   /*pour enlever les balises sur les listes*/
+}
+
+
 /*--------------------------------------------- HEADER --------------------------------------*/
 #navbar {
     background-color: #f6f0e9;  /*permet de masquer le texte quand il passe sous la navbar*/
@@ -31,7 +36,6 @@ a {
 #navbar ul {
     font-size: 32px;
     display: flex;
-    list-style: none;
     justify-content: space-around;
 }
 
@@ -60,7 +64,7 @@ a {
 }
 
 .contenu-accueil {
-    max-width: 600px;
+    max-width: 800px;
 }
 
 .contenu-accueil h1 {
@@ -72,6 +76,7 @@ a {
     background-color: #c2a817;
     color: #fff;
     font-size: 1.5em;
+    border-radius: 5px;
 }
 
 /*--------------------------------------------- ABOUT --------------------------------------*/
@@ -86,7 +91,7 @@ a {
 }
 
 .contenu-about {    
-    max-width: 600px;
+    max-width: 800px;
 }
 
 .contenu-about h1 {
@@ -105,10 +110,11 @@ a {
     justify-content: center;
     text-align: center;
     border-radius: 2%;
+    margin-bottom: 1em;
 }
 
 .contenu-services {    
-    max-width: 600px;
+    max-width: 800px;
 }
 
 .contenu-services h1 {
@@ -122,11 +128,14 @@ a {
 
 .button-infos-services {
     background-color: #c2a817;
+    border-radius: 5px;
     color: #fff;
 }
 
 /*--------------------------------------------- TEMOIGNAGES --------------------------------------*/
-/* #services-section {
+#temoignages-section {
+    background-color: #bf716b;
+    color: #fff;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -134,23 +143,110 @@ a {
     border-radius: 2%;
 }
 
-.contenu-services {    
-    max-width: 600px;
+.contenu-temoignages {    
+    max-width: 800px;
 }
 
-.contenu-services h1 {
+#temoignages-section h1 {
     border: thick double #cad3d6;
     padding: 5px;
 }
 
-.contenu-services h2 {
+.contenu-temoignages h2 {
     font-size: 2.5em;
 }
 
-.button-infos-services {
-    background-color: #c2a817;
+.contenu-temoignages p {
+    font-size: 1em;
+}
+
+/*--------------------------------------------- BLOG --------------------------------------*/
+#blog-section {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 2%;
+}
+
+.contenu-blog {    
+    max-width: 800px;
+}
+
+.contenu-blog h1 {
+    border: thick double #cad3d6;
+    padding: 5px;
+}
+
+.contenu-blog h2 {
+    font-size: 2.5em;
+}
+
+.contenu-blog p {
+    font-size: 1em;
+}
+
+/*--------------------------------------------- CONTACT --------------------------------------*/
+#contact-section {
+    background-color: #d7c876;
     color: #fff;
-} */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; /* Centrage horizontal du texte */
+    text-align: center;
+    border-radius: 2%;
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+#contact-section h1 {
+    padding: 5px;
+}
+
+.contenu-contact {
+    display: flex;
+    margin: 1em;
+    justify-content: space-around;
+}
+
+.contenu-contact-gauche form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    white-space: pre-wrap;
+}
+
+.contenu-contact-gauche form .form-label {
+    display: flex;
+    justify-content: space-around;
+}
+
+.button-contact {
+    background-color: #c2a817;
+    padding: 10px 20px; /* Ajout de rembourrage */
+    border-radius: 5px;
+    color: #fff;
+}
+
+.contenu-contact-gauche {
+    display: flex;
+    flex: 1;
+}
+
+.contenu-contact-droite #reseaux-sociaux {
+    display: flex;
+}
+
+.contenu-contact-droite {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 
 /*--------------------------------------------- SCROLL TOP BUTTON --------------------------------------*/
 
@@ -174,16 +270,16 @@ a {
 /*--------------------------------------------- MEDIA QUERIES --------------------------------------*/
 
 /* Styles pour les écrans de taille moyenne (tablette) */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 960px) {
     body {
-      font-size: 14px;
+      font-size: 12px;
     }
 }
   
 /* Styles pour les petits écrans (smartphones) */
 @media only screen and (max-width: 480px) {
     body {
-      font-size: 12px;
+      font-size: 10px;
     }
 }
-/*  -->  durée : 3h30*/
+/*  -->  durée : 6h30 */
