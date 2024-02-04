@@ -1,18 +1,38 @@
+/*Colors :
+#b82b21
+#f6f0e9
+#62aaa7
+#cad3d6
+#c2a817
+#fff
+#bf716b
+#d7c876
+
+#444444 pebble
+#716D64 olive
+#9B997B fern
+
+#d1b9b4 dusk
+#faf8f6 ivory
+#dfd1c9 oat
+*/
+
+
 body {
     font-size: 16px;
-    color: #b82b21;
-    background-color: #f6f0e9;
+    color: rgb(0, 0, 0);
+    background-image: url(../images/background-image-body.jpg);
     font-family: 'Arial', sans-serif;
 }
 
 h1 {
     font-size: 30px;
-    color: #62aaa7;
+    color: rgb(0, 0, 0);
 }
 
 h2 {
     font-size: 25px;
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 a {
@@ -27,7 +47,8 @@ li {
 
 /*--------------------------------------------- HEADER --------------------------------------*/
 #navbar {
-    background-color: #f6f0e9;  /*permet de masquer le texte quand il passe sous la navbar*/
+    /*background-color: #d1b9b4;  permet de masquer le texte quand il passe sous la navbar*/
+    color: #faf8f6;
     position: relative;
     z-index: 100;       /* permet de garder la nav au dessus de toutes les autres composantes */
     border-bottom: thick double #cad3d6;
@@ -40,7 +61,7 @@ li {
 }
 
 #navbar a:hover {
-    color: #62aaa7; /* Couleur de survol */
+    color: #dfd1c9; /* Couleur de survol */
 }
 
 #navbar.fixe {
@@ -65,24 +86,25 @@ li {
 
 .contenu-accueil {
     max-width: 800px;
+    background-color: rgba(255,255,255,0.3);
+    padding: 3%;
 }
 
 .contenu-accueil h1 {
     font-size: 2.5em;
-    color: #c2a817;
+    color: #faf8f6;
 }
 
 #CTA-1 {
-    background-color: #c2a817;
-    color: #fff;
+    background-color: #d1b9b4;
+    color: #faf8f6;
     font-size: 1.5em;
     border-radius: 5px;
 }
 
 /*--------------------------------------------- ABOUT --------------------------------------*/
 #about-section {
-    background-color: #d7c876;
-    color: #fff;
+    background-color: #dfd1c9;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -95,16 +117,19 @@ li {
 }
 
 .contenu-about h1 {
-    border: thick double #cad3d6;
+    border: thick double #faf8f6;
     padding: 5px;
+    color: #faf8f6;
 }
 
 .contenu-about h2 {
     font-size: 2.5em;
+    color: #444444;
 }
 
 /*--------------------------------------------- SERVICES --------------------------------------*/
 #services-section {
+    background-color: #faf8f6;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -118,23 +143,25 @@ li {
 }
 
 .contenu-services h1 {
-    border: thick double #cad3d6;
+    border: thick double #444444;
     padding: 5px;
+    color: #444444;
 }
 
 .contenu-services h2 {
     font-size: 2.5em;
+    color: #444444;
 }
 
 .button-infos-services {
-    background-color: #c2a817;
+    background-color: #d1b9b4;
     border-radius: 5px;
-    color: #fff;
+    color: #faf8f6;
 }
 
 /*--------------------------------------------- TEMOIGNAGES --------------------------------------*/
 #temoignages-section {
-    background-color: #bf716b;
+    background-color: #d1b9b4;
     color: #fff;
     height: 100%;
     display: flex;
@@ -148,20 +175,24 @@ li {
 }
 
 #temoignages-section h1 {
-    border: thick double #cad3d6;
+    border: thick double #d1b9b4;
     padding: 5px;
+    color: #d1b9b4;
 }
 
 .contenu-temoignages h2 {
     font-size: 2.5em;
+    color: #faf8f6;
 }
 
 .contenu-temoignages p {
     font-size: 1em;
+    color: #444444;
 }
 
 /*--------------------------------------------- BLOG --------------------------------------*/
 #blog-section {
+    background-color: #9B997B;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -188,9 +219,9 @@ li {
 
 /*--------------------------------------------- CONTACT --------------------------------------*/
 #contact-section {
-    background-color: #d7c876;
+    background-color: #716D64;
     color: #fff;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -234,6 +265,9 @@ li {
 .contenu-contact-gauche {
     display: flex;
     flex: 1;
+    background-color: #b82b21;
+    padding: 3%;
+    border: 2mm outset #b82b21;
 }
 
 .contenu-contact-droite #reseaux-sociaux {
