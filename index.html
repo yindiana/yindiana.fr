@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles__home-page.css">
+    <link rel="stylesheet" href="styles/styles__carousel.css">
     <!--favicon-->
     <title>Yindiana Concepts - Websites Developer</title>
 </head>
@@ -32,10 +34,24 @@
         <hr />
 
         <!-- content of the page -->
-        <article>
-            <div class="article__title"> <h1 class="article__title-text"> YINDIANA CONCEPTS <br> Websites Developer </h1> </div>
-            <div class="article__cta"> <p class="article__cta-btn"> Découvrez votre nouveau site web </p> </div>
+        <article id="home-page">
+            <div class="home-page__title"> <h1 class="home-page__title-text"> YINDIANA CONCEPTS <br> Websites Developer </h1> </div>
+            <div class="home-page__cta"> <p class="home-page__cta-btn"> Découvrez votre nouveau site web </p> </div>
         </article>
+
+        <!-- <article id="carousel-container">
+            <div id="carousel-container__slider">
+              <img class="carousel-container__slider-image" src="images/carousel__linux.png" alt="Image 1">
+              <img class="carousel-container__slider-image" src="images/carousel__html5.png" alt="Image 2">
+              <img class="carousel-container__slider-image" src="images/carousel__affiliation.png" alt="Image 3"> -->
+              <!-- Ajoutez autant d'images que nécessaire -->
+            <!-- </div>
+            <button id="carousel-container__prev-btn" class="carousel-container__btn" onclick="prevSlide()">❮</button>
+            <button id="carousel-container__next-btn" class="carousel-container__btn" onclick="nextSlide()">❯</button>
+            <button id="carousel-container__all">Voir tous les sites</button>
+        </article> -->
     </main>
+
+<script src="scripts/scripts_carousel.js"></script>
 </body>
 </html>
