@@ -21,6 +21,11 @@
     color: #000;
 }
 
+.nav__menu ul li a {
+    text-decoration: none;
+    color: #208AED;
+}
+
 /*----------------SPECIFIC/*----------------*/
 .video__background {
     position: fixed;

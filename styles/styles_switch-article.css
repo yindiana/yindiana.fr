@@ -1,0 +1,12 @@
+#home-page {
+    display: flex;
+}
+
+#carousel-container {
+    display: none;
+}
+
+
+#contacts {
+    display: none;
+}
