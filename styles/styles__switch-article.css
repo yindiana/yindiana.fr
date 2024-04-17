@@ -1,12 +1,11 @@
 #home-page {
-    display: none;
+    display: flex;
 }
 
 #carousel-container {
     display: none;
 }
 
-
 #contacts {
-    display: flex;
+    display: none;
 }

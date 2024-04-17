@@ -5,6 +5,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Inter', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
 }
 
 .nav__menu ul li, .home-page__title-text, .home-page__cta-btn {
@@ -17,12 +18,11 @@
     color: #208AED;
 }
 
-.home-page__title-text, .home-page__cta-btn {
+.home-page__title-text, .home-page__cta-btn a, #carousel-container__all a {
     color: #000;
 }
 
 .nav__menu ul li a {
-    text-decoration: none;
     color: #208AED;
 }
 
@@ -54,7 +54,7 @@ nav {
     padding: 0.5%;
 }
 
-.nav__logo {
+#nav__logo {
     display: flex;
     flex: 1;
 }
