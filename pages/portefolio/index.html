@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles__portfolio.css">
+    <!-- librairie font-awesome pour le bouton fa fa-search -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--favicon-->
+    <title>Yindiana.fr</title>
+</head>
+<body>
+    <!-- background video -->
+    <video autoplay muted loop class="video__background">
+        <source src="images/video__background.mp4" type="video/mp4">
+    </video>
+
+    <!-- main content of the page -->
+    <main>
+
+        <!-- navbar - logo + menu -->
+        <nav>
+            <div id="nav__logo"><img src="../../images/yindiana__logo.png" alt="yindiana__logo" class="nav__logo-img"></div>
+            <div class="nav__menu">
+                <ul>
+                    <li id="nav__menu-home"><a href="../../index.html">Accueil</a></li>
+                    <li id="nav__menu-yt"><a href="https://www.youtube.com/@yindiana" target="_blank" title="YT yindiana.fr">Youtube</a></li>
+                    <li id="nav__menu-ig"><a href="https://www.instagram.com/yindiana.fr/" target="_blank" title="IG yindiana.fr">Instagram</a></li>
+                    <li id="nav__menu-about">Portfolio</li>
+                    <li id="nav__menu-contacts">Contacts</li>
+                </ul>
+            </div>
+        </nav>
+        <hr />
+
+        <!-- content of the page -->
+        <article id="home-portfolio">
+            <form action="" id="home-portfolio__searchbar">
+                <input type="search" name="home-portfolio__searchbar-input" id="home-portfolio__searchbar-input" placeholder="Rechercher...">
+                <button type="submit" id="home-portfolio__searchbar-btn"><i class="fa fa-search"></i></button>
+            </form>
+            <div class="home-portfolio__articles">
+                <a href="item-article-template.html">
+                    <div class="home-portfolio__articles-item">
+                        <img src="images/home-portfolio__articles-list-img.png" alt="image de l'article 1" class="home-portfolio__articles-item-img">
+                        <section class="home-portfolio__articles-item-section">
+                        <h2>Title of article 1</h2>
+                        <p>Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt 
+                            ut labore et dolore magna aliqua.</p>
+                        </section>
+                    </div>
+                </a>
+
+                <a href="item-article-template.html">
+                    <div class="home-portfolio__articles-item">
+                        <img src="images/home-portfolio__articles-list-img.png" alt="image de l'article 1" class="home-portfolio__articles-item-img">
+                        <section class="home-portfolio__articles-item-section">
+                        <h2>Title of article 2</h2>
+                        <p>Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt 
+                            ut labore et dolore magna aliqua.</p>
+                        </section>
+                    </div>
+                </a>
+
+                <a href="item-article-template.html">
+                    <div class="home-portfolio__articles-item">
+                        <img src="images/home-portfolio__articles-list-img.png" alt="image de l'article 1" class="home-portfolio__articles-item-img">
+                        <section class="home-portfolio__articles-item-section">
+                        <h2>Title of article 3</h2>
+                        <p>Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt 
+                            ut labore et dolore magna aliqua.</p>
+                        </section>
+                    </div>
+                </a>
+            </div>
+        </article>
+    </main>
+
+<script src="./scripts/scripts__carousel.js"></script>
+<script src="./scripts/scripts__switch-article.js"></script>
+</body>
+</html>
