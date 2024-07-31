@@ -11,14 +11,6 @@
     flex-direction: column;
 }
 
-#contacts__infos-identity-presentation {
-    text-align: left;
-}
-
-#contacts__infos-identity-presentation-title {
-    font-size: 3em;
-}
-
 #contacts__infos-identity-about {
     display: flex;
     flex-direction: column;
@@ -28,4 +20,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.contacts__infos-reseaux-btn-img {
+    height: 6em;
 }
