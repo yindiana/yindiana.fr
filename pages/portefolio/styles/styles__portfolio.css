@@ -38,6 +38,7 @@
     justify-content: flex-start;
     width: 60%;
     overflow-y: scroll;
+    margin-bottom: 2%;
 }
 
 /*mise en ligne de chq item + prendre 100% de largeur + padding*/

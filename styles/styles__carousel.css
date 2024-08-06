@@ -23,5 +23,5 @@
     min-width: auto;
     height: auto;
     flex-shrink: 0;
-    margin: 3%;
+    border: thick double black;
 }
