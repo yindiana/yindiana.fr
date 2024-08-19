@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/styles__home-page.css">
-    <link rel="stylesheet" href="styles/styles__carousel.css">
-    <link rel="stylesheet" href="styles/styles__contacts.css">
-    <link rel="stylesheet" href="styles/styles__switch-article.css">
     <!--favicon-->
     <title>Yindiana.fr</title>
 </head>
@@ -25,11 +22,11 @@
             <div id="nav__logo"><img src="images/yindiana__logo.png" alt="yindiana__logo" class="nav__logo-img"></div>
             <div class="nav__menu">
                 <ul>
-                    <li id="nav__menu-home">Accueil</li>
+                    <li id="nav__menu-home"><a href="?" target="_blank" title="Accueil yindiana.fr">Accueil</a></li>
                     <li id="nav__menu-yt"><a href="https://www.youtube.com/@yindiana" target="_blank" title="YT yindiana.fr">Youtube</a></li>
                     <li id="nav__menu-ig"><a href="https://www.instagram.com/yindiana.fr/" target="_blank" title="IG yindiana.fr">Instagram</a></li>
-                    <li id="nav__menu-about">Portfolio</li>
-                    <li id="nav__menu-contacts">Contacts</li>
+                    <li id="nav__menu-about"><a href="pages/portfolio/index.html" target="_blank" title="Portefolio yindiana.fr">Portfolio</a></li>
+                    <li id="nav__menu-contacts"><a href="pages/contacts/index.html" target="_blank" title="Contacts yindiana.fr">Contacts</a></li>
                 </ul>
             </div>
         </nav>
@@ -40,42 +37,6 @@
             <div class="home-page__title"> <h1 class="home-page__title-text">YINDIANA CONCEPTS <br> Websites Developer</h1></div>
             <div class="home-page__cta"><p class="home-page__cta-btn"><a href="https://comeup.com/fr/@yndiana-concept" target="_blank">Découvrez votre nouveau site web</a></p></div>
         </article>
-
-        <article id="carousel-container">
-            <div id="carousel-container__main">
-                <div id="carousel-slider">
-                    <!-- chaques articles du carousel seront des liens random vers des sites joué par du js -->
-                    <a href="pages/jeuDeDevinette/index.html" target="_blank"><img src="images/carousel__game-from-1-to-100.png" class="carousel-image" alt="Jeu de devinettes"></a>
-                    <a href="pages/affiliationInvestissement/index.html" target="_blank"><img src="images/carousel__affiliation-investissements.png" class="carousel-image" alt="Comment investir son argent ?"></a>
-                    <!-- <a href="pages/" target="_blank"><img src="images/" class="carousel-image" alt="Image 3"></a> -->
-                    <a href="pages/portefolio/index.html" target="_blank"><img src="images/carousel__more-articles.png" class="carousel-image" alt="Tous les articles"></a>
-                </div>
-            </div>
-        </article>
-
-        <article id="contacts">
-            <div id="contacts__infos">
-                <div id="contacts__infos-identity">
-                    <div id="contacts__infos-identity-about">
-                        <!-- <button class="contacts__infos-about-btn"><a href="mailto:yindiana.contact@gmail.com?subject=Demande d'informations"><img src="images/contacts__infos-about-mail.png" alt="email image">yindiana.contact@gmail.com</a></button> -->
-                        <a href="mailto:yindiana.contact@gmail.com?subject=Demande d'informations" class="contacts__infos-identity-about-btn"><img src="images/contacts__infos-about-mail.png" alt="email image"></a>
-                        <a href="https://comeup.com/fr/@yndiana-concept" target="_blank" class="contacts__infos-identity-about-btn"><img src="images/contacts__infos-about-website.png" alt="email image"></a>
-                        <a href="https://www.google.com/maps/place/La+R%C3%A9union/@-21.1177289,55.4023361,11z/data=!4m6!3m5!1s0x2178778110b8e43b:0x4a7f8e89ecdbeaf9!8m2!3d-21.115141!4d55.536384!16zL20vMGx4aGo?entry=ttu" target="_blank" class="contacts__infos-identity-about-btn"><img src="images/contacts__infos-about-location.png" alt="localisation image"></a>
-                    </div>
-                </div>
-                <div id="contacts__infos-reseaux">
-                    <div id="contacts__infos-reseaux-title"><img src="images/contacts__infos-reseaux-title.png" alt="titre des différents réseaux"></div>
-                    <div id="contacts__infos-reseaux-btn">
-                        <a href="" target="_blank"><img class="contacts__infos-reseaux-btn-img" src="images/contacts__infos-reseaux-btn-cv.png" alt="bouton cv"></a>
-                        <a href="https://www.linkedin.com/in/yohan-indiana-271ba0171/" target="_blank"><img class="contacts__infos-reseaux-btn-img" src="images/contacts__infos-reseaux-btn-linkedin.png" alt="bouton linkedin"></a>
-                        <a href="" target="_blank"><img class="contacts__infos-reseaux-btn-img" src="images/contacts__infos-reseaux-btn-about.png" alt="bouton about"></a>
-                    </div>
-                </div>
-            </div>
-        </article>
     </main>
-
-<script src="./scripts/scripts__carousel.js"></script>
-<script src="./scripts/scripts__switch-article.js"></script>
 </body>
 </html>

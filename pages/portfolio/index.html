@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="stylesheet" href="../../styles/styles__carousel.css">
+    <!--favicon-->
+    <title>Yindiana.fr</title>
+</head>
+<body>
+    <!-- background video -->
+    <video autoplay muted loop class="video__background">
+        <source src="../../images/video__background.mp4" type="video/mp4">
+    </video>
+
+    <!-- main content of the page -->
+    <main>
+
+        <!-- navbar - logo + menu -->
+        <nav>
+            <div id="nav__logo"><img src="../../images/yindiana__logo.png" alt="yindiana__logo" class="nav__logo-img"></div>
+            <div class="nav__menu">
+                <ul>
+                    <li id="nav__menu-home"><a href="../../index.html" target="_blank" title="Accueil yindiana.fr">Accueil</a></li>
+                    <li id="nav__menu-yt"><a href="https://www.youtube.com/@yindiana" target="_blank" title="YT yindiana.fr">Youtube</a></li>
+                    <li id="nav__menu-ig"><a href="https://www.instagram.com/yindiana.fr/" target="_blank" title="IG yindiana.fr">Instagram</a></li>
+                    <li id="nav__menu-about"><a href="?" target="_blank" title="Portefolio yindiana.fr">Portfolio</a></li>
+                    <li id="nav__menu-contacts"><a href="../contacts/index.html" target="_blank" title="Contacts yindiana.fr">Contacts</a></li>
+                </ul>
+            </div>
+        </nav>
+        <hr />
+
+        <!-- content of the page -->
+        <article id="carousel-container">
+            <div id="carousel-container__main">
+                <div id="carousel-slider">
+                    <!-- chaques articles du carousel seront des liens random vers des sites joué par du js -->
+                    <a href="../jeuDeDevinette/index.html" target="_blank"><img src="../../images/carousel__game-from-1-to-100.png" class="carousel-image" alt="Jeu de devinettes"></a>
+                    <a href="../affiliationInvestissement/index.html" target="_blank"><img src="../../images/carousel__affiliation-investissements.png" class="carousel-image" alt="Comment investir son argent ?"></a>
+                    <!-- <a href="pages/" target="_blank"><img src="images/" class="carousel-image" alt="Image 3"></a> -->
+                    <a href="../all_portefolio/index.html" target="_blank"><img src="../../images/carousel__more-articles.png" class="carousel-image" alt="Tous les articles"></a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+<script src="../../scripts/scripts__carousel.js"></script>
+</body>
+</html>
