@@ -1,0 +1,30 @@
+:root {
+    --primary-color: #2c698d;   /* Bleu moderne */
+    --secondary-color: #272643; /* Gris foncé */
+    --accent-color: #e3f6f5;    /* Vert néon */
+    --neutral-color: #ffffff;   /* Blanc cassé */
+    --accent-secondary: #bae8e8;/* Jaune doré */
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--neutral-color); /* Utilisation du blanc cassé pour le fond */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--neutral-color);
+    text-align: center;
+    padding: 10px;
+}
