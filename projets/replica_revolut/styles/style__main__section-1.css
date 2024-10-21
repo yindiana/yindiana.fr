@@ -1,0 +1,21 @@
+#main__section-1 h1{
+    font-size: 4.3em;
+    margin-bottom: 0;
+}
+
+#main__section-1 p{
+    padding-right: 55%;
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+#main__section-1 button{
+    border-radius: 10% / 45%;
+    width: 18%;
+    height: auto;
+    background-color: black;
+    color: white;
+    padding: 1%;
+    font-size: 0.9em;
+}
+

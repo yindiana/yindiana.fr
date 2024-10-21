@@ -1,0 +1,25 @@
+:root{
+    --white: #ffffff;
+    --black: #000000;
+    --font-family-primary : "Aeonik Pro";
+    --font-family-title : "Aeonik Pro Capitalised";
+    --font-family-secondary : "sans-serif";
+
+
+}
+
+body{
+    font-family: var(--font-family-primary, --font-family-secondary);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-size: 1.1em;
+    background-image: 
+                        url(../images/8eebf02e-5d88-440b-bdf6-3c3ba27b1e8e.png),
+                        url(../images/0f19a47a-5874-4eab-bc9a-3bdb81982f2a.png),
+                        url(../images/d9e1dc43-652b-47b7-a8da-77f8c22b0c68.png);
+}
+
+* {
+    list-style-type: none;      /*enlever les points de la liste a puce*/
+}

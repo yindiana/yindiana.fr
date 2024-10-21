@@ -1,0 +1,13 @@
+/*#main__section communs*/
+.main__section{
+    min-height: 100vh;
+}
+
+.main__section div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 11%;
+    padding-right: 11%;
+    min-height: 100%;
+}

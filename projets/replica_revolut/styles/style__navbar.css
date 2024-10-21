@@ -1,0 +1,29 @@
+/*NAVBAR*/
+nav{
+    display: flex;
+    justify-content: space-around;
+    min-height: 100%;
+}
+
+.nav__span{
+    display: flex;
+    width: 50%;
+}
+
+.nav__span ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 18%;
+    width: 100%;
+}       /*mise en forme de la navbar entiere*/
+
+#nav__span-2{
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+}       /*SPECIFIQUE -- mise en forme des deux boutons de droite de la navbar*/
+
+#nav__span-1-logo{
+    font-size: 1.6em;
+}
