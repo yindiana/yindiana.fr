@@ -1,3 +1,15 @@
+#main__section-1{
+    color: white;
+    background:
+                    url(../images/8eebf02e-5d88-440b-bdf6-3c3ba27b1e8e.png),
+                    url(../images/0f19a47a-5874-4eab-bc9a-3bdb81982f2a.png),
+                    url(../images/d9e1dc43-652b-47b7-a8da-77f8c22b0c68.png);
+    background-repeat: no-repeat;
+    background-size: 22%, 100%, 100%;
+    background-position: bottom, bottom, right bottom;
+
+}       /*mise en page de l'arriere plan contenant 3 images*/
+
 #main__section-1 h1{
     font-size: 4.3em;
     margin-bottom: 0;
@@ -9,7 +21,7 @@
     font-size: 1.2em;
 }
 
-#main__section-1 button{
+#main__section-1-btn-open-account{
     border-radius: 10% / 45%;
     width: 18%;
     height: auto;
@@ -18,4 +30,3 @@
     padding: 1%;
     font-size: 0.9em;
 }
-
