@@ -1,0 +1,4 @@
+#main__section-2 div{
+    display: flex;
+    align-items: center;
+}       /*centrage du texte par rapport au fichier style__main.css qui est en flex-start*/

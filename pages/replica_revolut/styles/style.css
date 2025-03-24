@@ -1,0 +1,21 @@
+:root{
+    --white: #ffffff;
+    --black: #000000;
+    --font-family-primary : "Aeonik Pro";
+    --font-family-title : "Aeonik Pro Capitalised";
+    --font-family-secondary : "sans-serif";
+
+
+}
+
+body{
+    font-family: var(--font-family-primary, --font-family-secondary);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-size: 1.1em;
+}
+
+* {
+    list-style-type: none;      /*enlever les points de la liste a puce*/
+}
