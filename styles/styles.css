@@ -118,6 +118,11 @@ header p span {
   text-shadow: 8px 8px 8px var(--color-primary);
 }
 
+header p #subtitle {
+  color: var(--color-primary);
+  font-size: var(--font-size-h3);
+}
+
 .portfolio .portfolio_items {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
