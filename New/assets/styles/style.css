@@ -73,13 +73,16 @@
     font-family: var(--font-family-great-vibes);
   }
   header p {
-    text-align: right;
+    position: relative;
   }
   header p span {
     color: var(--color-gold);
     text-shadow: 8px 8px 8px var(--color-primary);
   }
   header p #subtitle {
+    position: absolute;
+    bottom: 0;
+    right: -5rem;
     color: var(--color-primary);
     font-size: var(--font-size-mini);
     font-family: var(--font-family-1);
