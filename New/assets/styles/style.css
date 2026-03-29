@@ -44,6 +44,7 @@
     --box-shadow-gold: 0 3px 15px rgba(197, 169, 29, 0.753);
 
     /* radius */
+    --border-radius-logo: 50%;
 
     /* transitions */
     --transition-1: all .1s ease-in-out;
@@ -59,6 +60,20 @@
     font-family: var(--font-family-1);
     font-size: var(--font-size-text);
     transition: var(--transition-1);
+  }
+
+  /* nav */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 50%; /* Place le centre de la navbar au centre de la page */
+    transform: translateX(-50%); /* Centre horizontalement la navbar */
+    z-index: 10;
+  }
+  #logo {
+    width: var(--font-size-logo);
+    height: auto;
+    border-radius: var(--border-radius-logo);
   }
 
   /* header */
