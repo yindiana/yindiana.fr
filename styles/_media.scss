@@ -1,74 +1,140 @@
+//generals
 @media only screen and (max-width: 1200px){
-    //generals
-    :root{
-        --font-size-h1: 5rem;
+    section{
+        padding: 6rem 8rem;
     }
 
-    //portfolio
-    .portfolio{
-        .portfolio_items{
-            display: grid;
-            grid-template-columns: 1fr;
+    .about-container, .progress-bars, .timeline, .blogs{
+        display: grid;
+        grid-template-columns: 1fr !important;
+    }
+
+    .main-title h2{
+        font-size: 2rem;
+    }
+    .bg-text{
+        font-size: 3.3rem !important;
+    }
+
+    .theme-btn{
+        width: 40px;
+        height: 40px;
+    }
+
+    .controls{
+        display: flex;
+        flex-direction: row;
+        top: auto;
+        bottom: 0;
+        left: 8%;
+        .control{
+            margin: 0 3.5% 0 0;
+        }
+    }
+}
+//generals
+@media only screen and (max-width: 550px){
+    section{
+        padding: 6rem 3rem;
+    }
+}
+
+//header-content
+@media only screen and (max-width: 1200px){
+    .header-content{    
+        .right-header{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-top: 3rem;
+            padding-right: 3rem;
+            margin-bottom: 4rem;
+            .name{
+                font-size: 1.2rem;
+            }
+            p{
+                font-size: 1rem;
+                margin: 1rem 0;
+                line-height: 1.5rem;
+            }
         }
     }
 }
 
-@media only screen and (max-width: 600px){
-    //generals
-    :root{
-        --color-primary: #2d4a5b;
-        --color-grey: #929394;
-        --font-size-h1: 2.5rem;
-        --font-size-h2: 1.7rem;
-        --font-size-h3: 1.5rem;
-        --font-size-h4: 1.2rem;
-        --font-size-logo: 1.2rem;
-        --font-size-text: .8rem;
-        --margin-1: .8rem;
-        --margin-2: 1rem;
-        --margin-3: 1.5rem;
-        --padding-1: .8rem;
-        --padding-2: 1rem;
-        --padding-3: 1.5rem;
-    }
+@media only screen and (max-width: 950px){
+    .header{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(rgba(120, 118, 118, 0.7), rgba(255, 255, 255, 0.5)),
+                  url(../images/left-header-shape.jpg);
 
-    //logo
-    .logo{
-        .logo_container{
-            padding-top: var(--padding-1);
-            img{
-                width: 45px;
-                height: 45px;
-                border-radius: 50%;
-                box-shadow: -7px -1px 7px var(--color-grey);
+    }
+    .header-content{
+        display: grid;
+        grid-template-columns: 1fr;
+        .left-header{
+            display: none;
+        }
+    
+        .right-header{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-left: 3rem;
+            .btn-con{
+                display: flex;
+                align-self: center;
             }
         }
     }
+}
 
-    //header
-    header{
-        p{
-            span{
-                text-shadow: 4px 4px 4px var(--color-primary);
-            }
-        }
+//about
+@media only screen and (max-width: 1200px) {
+    .left-about{
+        padding-right: 0 !important;
     }
 
-    //portfolio
-    .portfolio{
-        .portfolio_items{
-            display: grid;
-            grid-template-columns: 1fr;
+    .right-about{
+        display: grid;
+        grid-template-columns: 1fr !important;
+        padding-top: 2rem;
+        .about-item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     }
+}
 
-    //contact
+//Portfolio
+@media only screen and (max-width: 850px) {
+    .portfolio-text{
+        padding: 5rem 0;
+    }
+
+    .portfolios{
+        display: grid;
+        grid-template-columns: 1fr !important;
+    }
+}
+
+//Contact
+@media only screen and (max-width: 1150px){
     .contact-container{
-        .contact_items{
-            .social_medias{
-                .social_media{
-                    font-size: var(--font-size-h1);
-                }
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-right{
+        margin: 0 !important;
+        .input-control{
+            display: flex;
+            flex-direction: column;
+            :last-child{
+                margin-top: 3rem;
+                margin-left: 0 !important;
             }
         }
     }
