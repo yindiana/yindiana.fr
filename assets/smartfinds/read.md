@@ -1,4 +1,5 @@
-# Description
+## Description
+SmartFinds est une page qui relie les vidéos présentes sur mes réseaux sociaux aux produits affiliés en vente
 
 ## Agencement des dossiers
 index.html
