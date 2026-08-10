@@ -2,12 +2,12 @@
 SmartFinds est une page qui relie les vidéos présentes sur mes réseaux sociaux aux produits affiliés en vente
 
 ## Agencement des dossiers
-index.html
-|styles
-  |main.css
-|scripts
-  |main.js
-  |main.js
+- index.html
+- styles
+  - main.css
+- scripts
+  - main.js
+  - main.js
 
 ## index.html
 la page, avec la barre de recherche identifiée par id="product-search" (input) et id="product-search-form" (formulaire), commentée directement dans le HTML pour que tu la retrouves et l'ajustes.
